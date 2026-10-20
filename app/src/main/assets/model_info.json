@@ -1,0 +1,170 @@
+{
+  "modelo": "MobileNetV2 (ImageNet) + transfer learning + fine-tuning",
+  "dataset": "Pathmanaban et al. (2023), Mendeley Data, doi:10.17632/bn7ch8tvyp.1, CC BY 4.0",
+  "entrada": {
+    "forma": [
+      1,
+      224,
+      224,
+      3
+    ],
+    "tipo": "float32",
+    "formato": "RGB",
+    "rango": "0-255 (la normalización está incluida en el modelo)",
+    "redimensionado": "bilineal a 224x224 sin conservar la proporción"
+  },
+  "salida": {
+    "forma": [
+      1,
+      2
+    ],
+    "tipo": "float32",
+    "activacion": "softmax",
+    "clases": [
+      "defective",
+      "good"
+    ]
+  },
+  "particion": {
+    "train": 1299,
+    "val": 278,
+    "test": 279
+  },
+  "hiperparametros": {
+    "img_size": 224,
+    "batch_size": 32,
+    "lr_fase1": 0.001,
+    "lr_fase2": 1e-05,
+    "fine_tune_desde_capa": 100,
+    "dropout": 0.3,
+    "epocas_fase1": 15,
+    "epocas_fase2": 6
+  },
+  "tiempo_entrenamiento_min": 6.64,
+  "test": {
+    "accuracy": 0.9176,
+    "auc_roc": 0.9797,
+    "precision_defective": 0.9286,
+    "precision_good": 0.904,
+    "recall_defective": 0.9226,
+    "recall_good": 0.9113,
+    "f1_defective": 0.9256,
+    "f1_good": 0.9076
+  },
+  "tflite": {
+    "fp32": {
+      "accuracy": 0.9175627240143369,
+      "coincidencia_con_keras": 1.0,
+      "max_dif_prob": 8.046627044677734e-06
+    },
+    "fp16": {
+      "accuracy": 0.9175627240143369,
+      "coincidencia_con_keras": 1.0,
+      "max_dif_prob": 0.02091202139854431
+    }
+  },
+  "historial": {
+    "accuracy": [
+      0.70516,
+      0.84373,
+      0.85219,
+      0.87375,
+      0.88607,
+      0.88992,
+      0.89761,
+      0.90839,
+      0.89145,
+      0.903,
+      0.90454,
+      0.91301,
+      0.91301,
+      0.91455,
+      0.92071,
+      0.80446,
+      0.86374,
+      0.86836,
+      0.90608,
+      0.88607,
+      0.89222
+    ],
+    "val_accuracy": [
+      0.84892,
+      0.89568,
+      0.89928,
+      0.89928,
+      0.88489,
+      0.91367,
+      0.88129,
+      0.88489,
+      0.89928,
+      0.90288,
+      0.91727,
+      0.91007,
+      0.92086,
+      0.92086,
+      0.91727,
+      0.91367,
+      0.91367,
+      0.91007,
+      0.91007,
+      0.91007,
+      0.91007
+    ],
+    "loss": [
+      0.62489,
+      0.35821,
+      0.32358,
+      0.29937,
+      0.26763,
+      0.2478,
+      0.2532,
+      0.2202,
+      0.2425,
+      0.23904,
+      0.23304,
+      0.2147,
+      0.20723,
+      0.19708,
+      0.20583,
+      0.41526,
+      0.31646,
+      0.27956,
+      0.25134,
+      0.26857,
+      0.24581
+    ],
+    "val_loss": [
+      0.33278,
+      0.27283,
+      0.24839,
+      0.24508,
+      0.26097,
+      0.22557,
+      0.25547,
+      0.23218,
+      0.21781,
+      0.22414,
+      0.20899,
+      0.21208,
+      0.20395,
+      0.20299,
+      0.20227,
+      0.21588,
+      0.22924,
+      0.25535,
+      0.25507,
+      0.26032,
+      0.25567
+    ]
+  },
+  "matriz_confusion": [
+    [
+      143,
+      12
+    ],
+    [
+      11,
+      113
+    ]
+  ]
+}

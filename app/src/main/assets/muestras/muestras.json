@@ -1,0 +1,104 @@
+{
+ "clases": [
+  "defective",
+  "good"
+ ],
+ "muestras": [
+  {
+   "archivo": "defective_Defective_258.png",
+   "real": "defective",
+   "prob_keras": [
+    0.82513,
+    0.17487
+   ],
+   "prob_tflite_fp16": [
+    0.83048,
+    0.16952
+   ]
+  },
+  {
+   "archivo": "defective_Defective_12.png",
+   "real": "defective",
+   "prob_keras": [
+    0.97186,
+    0.02814
+   ],
+   "prob_tflite_fp16": [
+    0.97297,
+    0.02703
+   ]
+  },
+  {
+   "archivo": "defective_Defective_569.png",
+   "real": "defective",
+   "prob_keras": [
+    0.9997,
+    0.0003
+   ],
+   "prob_tflite_fp16": [
+    0.99969,
+    0.00031
+   ]
+  },
+  {
+   "archivo": "defective_Defective_509.png",
+   "real": "defective",
+   "prob_keras": [
+    0.7041,
+    0.29591
+   ],
+   "prob_tflite_fp16": [
+    0.71047,
+    0.28953
+   ]
+  },
+  {
+   "archivo": "good_good_262.png",
+   "real": "good",
+   "prob_keras": [
+    0.01529,
+    0.98471
+   ],
+   "prob_tflite_fp16": [
+    0.01527,
+    0.98473
+   ]
+  },
+  {
+   "archivo": "good_good_200.png",
+   "real": "good",
+   "prob_keras": [
+    0.05183,
+    0.94817
+   ],
+   "prob_tflite_fp16": [
+    0.051,
+    0.949
+   ]
+  },
+  {
+   "archivo": "good_good_700.png",
+   "real": "good",
+   "prob_keras": [
+    0.35057,
+    0.64943
+   ],
+   "prob_tflite_fp16": [
+    0.34574,
+    0.65426
+   ]
+  },
+  {
+   "archivo": "good_good_175.png",
+   "real": "good",
+   "prob_keras": [
+    0.88885,
+    0.11115
+   ],
+   "prob_tflite_fp16": [
+    0.88718,
+    0.11282
+   ]
+  }
+ ]
+}
